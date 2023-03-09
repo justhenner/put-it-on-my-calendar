@@ -17,7 +17,33 @@ $(function () {
     // sets user input and time in local storage
     localStorage.setItem(time, value);
   });
-  
+
+  // function that adds/removes css class based on currentHour
+  function updateHour(){
+    // grab hour from dayjs
+    var currentHour = dayjs().hour();
+    // array that tests whether currentHour matches hour in array
+    var hourArr = [9, 10, 11, 12, 13, 14, 15, 16, 17]
+    // run through array and apply css class that matches hour
+    hourArr.forEach(hour => {
+      if(hour === currentHour){
+        // hour in array === currentHour ; set present 
+        $(".description").addClass("present")
+        $(".description").removeClass("past")
+        $(".description").removeClass("future")
+      } else if (hour < currentHour){
+        // if hour in array < currentHour ; set past  
+        $(".description").removeClass("present")
+        $(".description").addClass("past")
+        $(".description").removeClass("future")
+      } else {
+        // if hour in array > currentHour ; set future 
+        $(".description").removeClass("present")
+        $(".description").removeClass("past")
+        $(".description").addClass("future")
+      }
+    });
+  }
   var currentDay = $("#currentDay");
   currentDayEl.text(dayjs().format("dddd[,) MMM D"));
   var saveButtonEl = $(".btn");
