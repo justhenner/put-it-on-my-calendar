@@ -14,7 +14,7 @@
 ## Description
 
 Stop missing your appointments or showing up late. "Put it on my Calendar" saves tasks, books appointments and keeps you accountable of your day. Block off time during working hours, which once saved will be populated on local storage. What's more, visually keep track of your day using a color coded technique. 
-[Click here to view Deployed Site](https://justhenner.github.io/get-me-a-password/)
+[Click here to view Deployed Site](https://justhenner.github.io/put-it-on-my-calendar/)
 ![Alt text](./Assets/Screen%20Shot%202023-03-10%20at%2012.45.38%20PM.png)
 
 ## Table of Contents
